@@ -62,6 +62,7 @@ from sklearn.model_selection import train_test_split
 
 model = Sequential()
 model.add(Dense(units = 11, activation = 'relu', input_dim = 21))
+model.add(Dropout(0.2))
 model.add(Dense(units = 1, activation = 'sigmoid'))
 
 model.compile(optimizer = 'adam', loss = 'binary_crossentropy', metrics = ['accuracy'])
